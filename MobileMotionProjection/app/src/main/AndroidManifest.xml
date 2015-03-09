@@ -6,7 +6,7 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
@@ -24,6 +24,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.avprojects.mobilemotionprojection.MainActivity" />
         </activity>
+        <uses-permission android:name="android.permission.CAMERA" />
+        <uses-feature android:name="android.hardware.camera" />
+        <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+        <uses-feature android:name="android.hardware.camera.front" android:required="false"/>
+        <uses-feature android:name="android.hardware.camera.front.autofocus" android:required="false"/>
     </application>
 
 </manifest>
